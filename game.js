@@ -33,14 +33,17 @@ function setup() {
 			grid[i][j] = floor(random(2));
 		}
 	}
+	
+	//Frame rate for visualisation
+	frameRate(15);
 }
 
-let color = [255, 255, 255];
+let color = [200, 0, 0];
 
 function draw() { 
 	
 	//Black background
-	background(0); 
+	background(255); 
 	
 	//Draw the grid based on resolution
 	for(let i = 0; i < cols; i++)
@@ -52,7 +55,7 @@ function draw() {
 			if(grid[i][j] == 1)
 			{
 				fill(color);
-				stroke(0);
+				stroke(255);
 				rect(x,y,resolution-1,resolution-1);
 			}
 		}
